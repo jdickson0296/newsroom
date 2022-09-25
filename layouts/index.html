@@ -4,7 +4,7 @@
   {{- $paginator := .Paginate $pages -}}
   {{- $size := $paginator.PageSize }}
   {{- $scratch := newScratch }}
-  {{ partial "carousel.html" (dict "context" . "items" "1" "height" "75" "unit" "%" "duration" "5000") }}
+  {{ partial "carousel.html" (dict "context" . "items" "1" "height" "75" "unit" "%" "duration" "4000") }}
   {{- range $index, $value := $paginator.Pages }}
     {{ if isset .Params "image" }}
       {{ $scratch.Set "image" .Params.image }}
