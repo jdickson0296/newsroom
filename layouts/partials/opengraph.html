@@ -1,13 +1,13 @@
 {{- $params := site.Params }}
 {{- $pl := .Permalink }}
 {{ $st := site.Title }}
-{{- $summary := "" }}
+<!-- {{- $summary := "" }}
 {{- with .Summary }}
   {{-  $summary = . }}
 {{- else  }}
   {{- $summary = $params.description }}
 {{- end }}
-{{- $summary = truncate 160 "" $summary }}
+{{- $summary = truncate 160 "" $summary }} -->
 {{- $logo := absURL (printf "images/%s" $params.logo) }}
 {{- if in $params.logo "https://" }}
   {{- $logo = $params.logo }}

@@ -1,5 +1,5 @@
 <div class="archive wrap mt">
-  <h1 class="archive_title">Archive</h1>
+  <h1 class="archive_title">{{ .Title }}</h1>
   {{ $paginator := .Paginate (where .Data.Pages "Section" "!=" "").ByPublishDate.Reverse }}
   {{- range $paginator.Pages }}
   <a class="archive_item" href="{{ .Permalink }}">
@@ -7,9 +7,9 @@
     <time class="post_date">{{ dateFormat "02. January 2006" . }}</time>
     {{- end -}}
     <h3 class="article_title">{{ .Title }}</h3>
-    {{- with .Summary -}}
+    <!-- {{- with .Summary -}}
     <p>{{ truncate 150 .  }}</p>
-    {{- end -}}
+    {{- end -}} -->
   </a>
   {{- end -}}
 </div>
